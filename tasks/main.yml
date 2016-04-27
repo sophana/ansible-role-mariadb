@@ -10,6 +10,9 @@
   when: mysql_conf_tpl != 'change_me'
   notify: restart mysql
 
+- include: "{{ mysql_setup_inc }}"
+  when: mysql_setup_inc != 'change_me'
+
 - name: Start and enable service
   service: name=mysql state=started enabled=yes
 

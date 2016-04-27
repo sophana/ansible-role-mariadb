@@ -37,6 +37,12 @@ Configuration filename:
 mysql_conf_file: settings.cnf
 ```
 
+Include extra custom tasks before starting mariadb:
+
+```
+mysql_setup_inc: change_me
+```
+
 ### Experimental unattended mysql_secure_installation
 
 ```
